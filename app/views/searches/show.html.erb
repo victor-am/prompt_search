@@ -1,0 +1,13 @@
+<%= render 'search_form' %>
+
+<h2>Results</h2>
+
+<% if @results.empty? %>
+  <p>No results found</p>
+<% else %>
+  <ul>
+    <% @results.each do |prompt| %>
+      <li><%= prompt.text %></li>
+    <% end %>
+  </ul>
+<% end %>
