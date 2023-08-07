@@ -6,6 +6,8 @@ ruby '3.1.2'
 gem 'elasticsearch-model', '~> 7.2.1'
 gem 'elasticsearch-rails', '~> 7.2.1'
 
+gem 'activerecord-import', '~> 1.4.1', require: false
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.7', '>= 6.1.7.4'
 # Use postgresql as the database for Active Record
