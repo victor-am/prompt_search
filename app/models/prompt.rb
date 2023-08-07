@@ -6,13 +6,14 @@ class Prompt < ApplicationRecord
     indexes :text, type: :text
   end
 
-  def self.search(query)
+  def self.search(query, options)
     params = {
       query: {
         match: {
           text: { query: query, fuzziness: "AUTO" }
         }
-      }
+      },
+      size: options[:size]
     }
     __elasticsearch__.search(params)
   end

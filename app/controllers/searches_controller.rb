@@ -3,7 +3,7 @@ class SearchesController < ApplicationController
   end
 
   def create
-    @results = Prompt.search(params[:query]).records.to_a
+    @results = Prompt.search(params[:query], size: 25).records.to_a
     render :show
   end
 end
